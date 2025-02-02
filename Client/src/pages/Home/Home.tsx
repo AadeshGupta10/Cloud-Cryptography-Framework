@@ -17,7 +17,7 @@ const Home = () => {
                 className="size-56 mx-auto"
             />
 
-            <a href="https://aadesh-trimrr.vercel.app/cloud-cryptography-framework">
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSfdv4b5qlOmxYNuMV0tH4dHlMllQpFOd0gN0DBXVikfyZegnQ/viewform">
                 <Button variant="contained" className="w-fit mx-auto">
                     Visit the Form
                 </Button>
