@@ -19,7 +19,7 @@
         "OPTIONS"
       ],
       "headers": {
-        "Access-Control-Allow-Origin": "https://notely-world.vercel.app",
+        "Access-Control-Allow-Origin": "https://cloud-cryptography-framework.vercel.app/",
         "Access-Control-Allow-Methods": "GET, POST",
         "Access-Control-Allow-Headers": "Content-Type",
         "Access-Control-Allow-Credentials": "true"
