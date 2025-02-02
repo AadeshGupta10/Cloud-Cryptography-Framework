@@ -125,7 +125,7 @@ const MFA = ({ MFA_Setup, MFA_Success, user_id }: prop) => {
                         mfa_pending ?
                             <div className='flex flex-wrap gap-2 justify-center'>
                                 <Spinner />
-                                <>Setting Up MFA</>
+                                <>{MFA_Setup ? 'Setting Up MFA' : 'Verifying MFA Token'}</>
                             </div>
                             :
                             "Proceed"
