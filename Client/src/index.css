@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    * {
+        font-family: "Inter";
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    
+    .bg-white-custom {
+        background-color: #ffffff;
+        /* off-white:#FAF9F6 */
+    }
+    
+    .bg-dark {
+        background-color: #111827;
+    }
+    
+    .custom-scrollbar::-webkit-scrollbar {
+        display: none;
+        width: 5px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+        background: #ffffff;
+        border-radius: 50%;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+        background: rgb(106, 106, 106);
+        border-radius: 25px;
+        text-align: center;
+    }
+
+    .field {
+        width: 66.666667%;
+        min-height: 2.4rem;
+        outline: none;
+        border: 1px solid #d1d5db;
+        padding: .25rem .5rem;
+        border-radius: .25rem;
+        font-size: 15px !important;
+    }
+
+    .field:hover,
+    .field:focus {
+        border-color: #9ca3af;
+    }
+
+    @media screen and (max-width: 600px) {
+        .field {
+            width: 100% !important;
+        }
+    }
+
+    .field_block {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0.75rem;
+        border: 1px solid #d1d5db;
+        padding: .45rem;
+        border-radius: 0.375rem;
+        background-color: #f3f4f6;
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 150ms;
+    }
+
+    .input {
+        width: 100%;
+        outline: none;
+        background-color: transparent;
+        font-weight: 400;
+    }
+
+    .small_text {
+        font-size: 14px !important;
+    }
+
+    .smaller_text {
+        font-size: 12px !important;
+    }
+
+    .input_bg {
+        background-color: rgb(248, 248, 248) !important;
+    }
+}
