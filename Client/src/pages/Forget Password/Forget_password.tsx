@@ -9,6 +9,7 @@ import { Mail } from 'lucide-react';
 import Form_error from '../../components/Error/Form_error';
 import Email_verification from '../../components/Email Verification/Email_verification';
 import Create_new_password from '../../components/Create New Password/Create_new_password';
+import { toast } from 'react-toastify';
 
 const Forget_password = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm()
@@ -21,6 +22,9 @@ const Forget_password = () => {
         mutationFn: check_email,
         onSuccess: () => {
             setOpenVerification(!openVerification)
+        },
+        onError: (err: { response: { data: string } }) => {
+            toast.error(err.response.data);
         }
     })
 

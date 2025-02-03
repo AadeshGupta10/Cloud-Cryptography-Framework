@@ -51,8 +51,7 @@ const check_email = async (e: any) => {
     return await toast.promise(
         axios_instance.post("/check_email", e),
         {
-            pending: `Checking Email.... Please Wait`,
-            error: "Email Invalid"
+            pending: `Checking Email.... Please Wait`
         }
     )
 }
