@@ -14,8 +14,8 @@ const transporter = nodemailer.createTransport({
     port: 465,
     secure: true, // true for port 465, false for other ports
     auth: {
-        user: "aadeshgupta5058@gmail.com",
-        pass: "pqocmbfgeobhqiti",
+        user: process.env.USER,
+        pass: process.env.PASSKEY,
     },
 });
 
@@ -241,7 +241,7 @@ const handleMFAVerification = async (req, res) => {
             })
         }
         else {
-            const {mfa_base} = await userModel.findById({ "_id": user_id }, { mfa_base: 1 });
+            const { mfa_base } = await userModel.findById({ "_id": user_id }, { mfa_base: 1 });
 
             verified = speakeasy.totp.verify({
                 secret: mfa_base,
