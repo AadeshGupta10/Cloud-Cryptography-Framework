@@ -80,9 +80,9 @@ const handleUserLogin = async (req, res) => {
 
         res
             .status(200)
-            .send({ "message": "Login Successfull", "token": token, "id": user._id });
+            .send({ "message": "Login successfull", "token": token, "id": user._id });
     } catch {
-        res.status(500).send("Signin Failed");
+        res.status(500).send("Network error occured. Please try again");
     }
 }
 

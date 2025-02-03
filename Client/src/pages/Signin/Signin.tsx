@@ -8,6 +8,7 @@ import Verification_header from '../../components/Verification Header/Verificati
 import { Eye, EyeOff, LockKeyhole, Mail } from 'lucide-react'
 import Form_error from '../../components/Error/Form_error'
 import MFA from '@/components/MFA/MFA'
+import { toast } from 'react-toastify'
 
 const Signin = () => {
 
@@ -28,7 +29,9 @@ const Signin = () => {
             setToken(response.data.token);
             setId(response.data.id);
             setOpenMFA(!openMFA);
-
+        },
+        onError: (err: { response: { data: string } }) => {
+            toast.error(err.response.data);
         }
     })
 

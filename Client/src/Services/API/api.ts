@@ -18,8 +18,7 @@ const signin = async (e: any) => {
     return await toast.promise(
         axios_instance.post("/signin", e),
         {
-            pending: 'Verifying Credentials',
-            error: "Credentials Invalid"
+            pending: 'Verifying Credentials'
         }
     )
 }
