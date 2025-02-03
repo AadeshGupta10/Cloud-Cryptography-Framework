@@ -158,13 +158,13 @@ const handleCheckEmailDuplicacy = async (req, res) => {
         const data = await userModel.find({ email: req.body.email }).countDocuments()
 
         if (data == 0) {
-            res.status(200).send("Email Id Not Found");
+            res.status(200).send("Email Id is valid");
         }
         else {
-            res.status(500).send("Email Id Found");
+            res.status(500).send("Email Id already exists");
         }
     } catch {
-        res.status(500).send("Error in Checking Email Duplicacy");
+        res.status(500).send("Network error occured. Please try again");
     }
 }
 

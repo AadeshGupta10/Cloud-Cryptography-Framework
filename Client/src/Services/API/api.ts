@@ -62,8 +62,7 @@ const check_email_duplicacy = async (e: any) => {
     return await toast.promise(
         axios_instance.post("/check_email_duplicacy", e),
         {
-            pending: `Checking Email.... Please Wait`,
-            error: "Email Already Registered"
+            pending: `Checking Email.... Please Wait`
         }
     )
 }
